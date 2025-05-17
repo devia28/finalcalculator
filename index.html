@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iPhone Style Number Converter</title>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'SF Pro Display', sans-serif;
+      background-color: #f2f2f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .calculator {
+      background-color: #fff;
+      margin-top: 50px;
+      padding: 20px 30px;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007AFF;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #005fce;
+    }
+
+    input:disabled {
+      background-color: #f0f0f0;
+      color: #555;
+    }
+
+    .output-group {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Number System Converter</h1>
+
+    <label for="base">Choose Base</label>
+    <select id="base">
+      <option value="binary">Binary</option>
+      <option value="octal">Octal</option>
+      <option value="decimal" selected>Decimal</option>
+      <option value="hexadecimal">Hexadecimal</option>
+    </select>
+
+    <label for="inputValue">Enter Value</label>
+    <input type="text" id="inputValue" placeholder="e.g. 1010" />
+
+    <button id="convertBtn">Convert</button>
+
+    <div class="output-group">
+      <label>Binary</label>
+      <input type="text" id="binary" disabled />
+
+      <label>Octal</label>
+      <input type="text" id="octal" disabled />
+
+      <label>Decimal</label>
+      <input type="text" id="decimal" disabled />
+
+      <label>Hexadecimal</label>
+      <input type="text" id="hexadecimal" disabled />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
